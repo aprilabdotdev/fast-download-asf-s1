@@ -7,7 +7,7 @@ while read LINE; do
     printf "\nresolving url (%s/%s)...\n" $i $total_line
     filename=$(basename $LINE)
     ((i=i+1))
-    wget  --user yuxiao --password gpjSF6YcUOHELYfs8PVr $LINE -bc  # do the actual download
+    wget  --user yuxiao --ask-password $LINE -bc  # do the actual download
     sleep 5  # wait 15 seconds (so that the download actually starts)
     while [ ! -f "$filename" ]; do
         sleep 5  # check every 5 seconds
