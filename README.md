@@ -4,7 +4,7 @@ This repo provides a solution to download S1 from ASF link at a rather high spee
 Since this solution is mostly a concern for Chinese scholars and researchers,
 the following paragraphs are written in Chinese.
 
-## 从 ASF 网站告诉下载 Sentinel-1 数据
+## 从 ASF 网站高速下载 Sentinel-1 数据
 
 此 repo 描述了一种可以解决无法从 ASF 网站下载 Sentinel-1 数据的问题，且新的下载数据可以达到相当快的速度（本人在教育网与华为云服务器上皆测试单景达到了 20MB/s 的速度）。
 
