@@ -36,7 +36,7 @@ the following paragraphs are written in Chinese.
 bash resolve_download_url.sh filelist
 ```
 
-该脚本将依次执行 `wget` 命令，获取真实的数据下载链接。最后将所有解析的真实链接存到一个名为 `resolved_url` 的文件中。（注：该步骤需要在可以解析 `urs.earthdata.nasa.gov` 的环境下进行，大家就八仙过海各显神通吧，不过这一步对网络速度的要求应该不高。）因为不会进行真实的数据下载，所以整个过程应该较快。根据你网络的情况，解析每一个链接应该 10 来秒就差不多了。
+该脚本将依次执行 `wget` 命令，获取真实的数据下载链接。最后将所有解析的真实链接存到一个名为 `resolved_url` 的文件中。（注：该步骤需要在可以连接上 `urs.earthdata.nasa.gov` 的环境下进行，大家就八仙过海各显神通吧，不过这一步对网络速度的要求应该不高。）因为不会进行真实的数据下载，所以整个过程应该较快。根据你网络的情况，解析每一个链接应该 10 来秒就差不多了。
 
 注1: 请在 `resolve_download_url.sh` 中的第 10 行改成你自己注册的 ASF 的用户名。
 
