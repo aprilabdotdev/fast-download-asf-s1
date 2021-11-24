@@ -1,5 +1,6 @@
 #! /bin/bash
 
+rm -rf resolved_url
 total_line=$(cat $1 | grep https | wc -l)
 ((i=1))
 while read LINE; do
