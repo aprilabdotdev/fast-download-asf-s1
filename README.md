@@ -14,6 +14,7 @@ the following paragraphs are written in Chinese.
 貌似从最近（大约从 2021 年？）开始，目前如果使用 ASF 网站下载 Sentinel-1 数据，会出现以下问题：
 
 ![problem-descrition-1](img/problem-description-1.png)
+*卡在连接 urs.earthdata.nasa.gov 上*
 
 也就是无法连接 urs.earthdata.nasa.gov。(有一个很诡异的点，因为 urs.earthdata.nasa.gov
 的 80 端口是可以访问的，但是 443 端口和 ping 都是不通的。我感觉更像是近期 nasa.gov 在某些
@@ -24,14 +25,16 @@ the following paragraphs are written in Chinese.
 是在 AWS cloudfront 这个著名的 CDN 上存储的：
 
 ![final-download-url](img/final-download-url.png)
+*最终的下载连接其实是一个 AWS CDN*
 
 一个很有意思的事情是，AWS cloudfront 的 CDN 其实是可以正常访问的。作为一个著名的 CDN，其
 线路其实是非常优化的，我尝试了华为云服务器（北京）、教育网（西安）、电信 5G（西安）等，都达到
 了非常理想的下载速度，其中前二者都可以达到 20MB/s 的速度。那么接下来问题就变得简单了：只要能
 从原始的 ASF 的 link 解析到最终的 AWS cloudfront 的 URL，就可以在国内环境下实现一个非常
-理想的下载速度！
+理想的下载速度。
 
 ![download-from-nwpu](img/download-from-nwpu.png)
+*在教育网测到了 20MB/s+ 的下载速度*
 
 ## 如何使用该脚本加速？
 
